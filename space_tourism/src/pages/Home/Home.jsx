@@ -14,7 +14,7 @@ const Home = () => {
       </p>
 
       <button className="Explore">
-        <NavLink>Explore</NavLink>
+        <NavLink to={"/planets/moon"}>Explore</NavLink>
       </button>
     </CenteredContainer>
   );
