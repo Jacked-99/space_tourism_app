@@ -27,16 +27,34 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
-h1 {
-  font-size: 5rem;
-  line-height: 1.1;
+h1,
+h2,
+h3,
+h4 {
   font-family: "Bellefair", serif;
+}
+h1 {
+  font-size: 6rem;
+  line-height: 1.1;
+
   color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
-
+h2 {
+  font-size: 5rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 0.2rem;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;

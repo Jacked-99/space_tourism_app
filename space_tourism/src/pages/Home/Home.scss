@@ -1,14 +1,15 @@
 .info {
-  font-family: "Barlow", sans-serif;
-  font-size: 1rem;
   margin-inline: 1rem;
   margin-block: 0;
   color: #fff;
   &.tech {
-    font-family: "Barlow Condensed", sans-serif;
     text-transform: uppercase;
     color: #d0d6f9;
+    margin-top: 2rem;
   }
+}
+.home_title {
+  margin-block: 1rem;
 }
 
 .Explore {

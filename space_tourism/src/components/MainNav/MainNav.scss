@@ -8,6 +8,9 @@
 .hamburger {
   background: none;
 }
+.hamburger:hover {
+  border: none;
+}
 .closed {
   display: none;
 }

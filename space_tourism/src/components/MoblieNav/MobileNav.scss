@@ -9,10 +9,13 @@
   top: 0;
   right: 0;
   .close {
+    border: none;
     background: none;
     margin-left: auto;
-    margin-right: 0;
-    :hover {
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    > :hover {
+      color: #fff;
     }
   }
   .navbar {
@@ -32,10 +35,13 @@
     }
     > a:hover {
       text-decoration: underline;
+      text-decoration-color: rgba($color: #fff, $alpha: 0.5);
     }
   }
 }
 button:hover {
+  border: none;
+  color: #fff;
 }
 .opened {
   display: flex;

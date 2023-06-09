@@ -4,7 +4,7 @@ import "./Home.scss";
 const Home = () => {
   return (
     <CenteredContainer>
-      <p className="info tech">So, you want to travel to</p>
+      <h5 className="info tech">So, you want to travel to</h5>
       <h1 className="home_title">Space</h1>
       <p className="info ">
         Let’s face it; if you want to go to space, you might as well genuinely
