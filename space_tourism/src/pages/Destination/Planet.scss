@@ -1,0 +1,10 @@
+@use "../../Utils/mixins" as m;
+.planet {
+  aspect-ratio: 1;
+  max-width: 30vh;
+}
+.containerPlanetBackground {
+  @include m.background(
+    $url: "../../assets/destination/background-destination-mobile.jpg"
+  );
+}

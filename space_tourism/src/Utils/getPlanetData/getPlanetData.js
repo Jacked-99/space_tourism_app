@@ -1,12 +1,16 @@
 // funkcja dostaje nazwe planety (moze dostawać obiekt jesli moglaby fetchowac inne dane )
+import mars from "../../assets/destination/image-mars.png";
+import moon from "../../assets/destination/image-moon.png";
+import titan from "../../assets/destination/image-titan.png";
+import europa from "../../assets/destination/image-europa.png";
 
 const getPlanetData = (planetName) => {
   const data = getRestData(planetName);
-  //image-titan.png
-  //image-${planetName}.png
+  const url = getPlanetImg(planetName);
+
   return {
     name: planetName,
-    imgSrc: `../../assets/destination/image-${planetName}.png`,
+    imgSrc: url,
     description: data.desc,
     distance: data.dist,
     travelTime: data.travelTm,
@@ -49,4 +53,14 @@ const getRestData = (name) => {
   return { desc, dist, travelTm };
 };
 
+const getPlanetImg = (name) => {
+  const planets = {
+    titan,
+    moon,
+    europa,
+    mars,
+  };
+
+  return planets[name];
+};
 export default getPlanetData;

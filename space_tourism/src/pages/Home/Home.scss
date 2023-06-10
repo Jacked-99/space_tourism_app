@@ -11,7 +11,14 @@
 .home_title {
   margin-block: 1rem;
 }
-
+.containerHomeBackground {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+}
 .Explore {
   border-radius: 100%;
   width: 20vh;

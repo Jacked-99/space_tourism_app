@@ -1,9 +1,11 @@
 import CenteredContainer from "../../components/CeneterdContainer/ConteredContainer";
 import { NavLink } from "react-router-dom";
 import "./Home.scss";
+import MainNav from "../../components/MainNav/MainNav";
 const Home = () => {
   return (
-    <CenteredContainer>
+    <CenteredContainer classes={"containerHomeBackground"}>
+      <MainNav />
       <h5 className="info tech">So, you want to travel to</h5>
       <h1 className="home_title">Space</h1>
       <p className="info ">
