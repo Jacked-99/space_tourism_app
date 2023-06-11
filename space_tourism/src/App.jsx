@@ -4,6 +4,8 @@ import RootPage from "./pages/RootPage";
 import Home from "./pages/Home/Home";
 import { loader as planetLoader } from "./pages/Destination/Planet";
 import Planet from "./pages/Destination/Planet";
+import Crew from "./pages/Crew/Crew";
+import { loader as crewLoader } from "./pages/Crew/Crew";
 
 function App() {
   const router = createBrowserRouter([
@@ -24,6 +26,13 @@ function App() {
               element: <Planet />,
               loader: planetLoader,
             },
+          ],
+        },
+        {
+          path: "/crew",
+
+          children: [
+            { path: ":crewName", element: <Crew />, loader: crewLoader },
           ],
         },
       ],

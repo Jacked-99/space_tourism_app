@@ -1,0 +1,11 @@
+@use "../../Utils/variables" as v;
+@use "../../Utils/mixins" as m;
+
+.crewContainer {
+  @include m.background(
+    $url: "../../assets/destination/background-destination-mobile.jpg"
+  );
+  > h2 {
+    margin: 0;
+  }
+}

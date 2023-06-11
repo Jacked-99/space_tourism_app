@@ -1,10 +1,11 @@
 import { useParams, useLoaderData } from "react-router";
-import getPlanetData from "../../Utils/getPlanetData/getPlanetData";
+import getData from "../../Utils/getPlanetData/getData";
 import PlanetsNavbar from "./PlanetsNavbar";
 import "./Planet.scss";
 import CenteredContainer from "../../components/CeneterdContainer/ConteredContainer";
 import MainNav from "../../components/MainNav/MainNav";
 import SectionDivider from "../../components/SectionDivider/SectionDivider";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 const Planet = () => {
   const params = useParams();
@@ -13,9 +14,7 @@ const Planet = () => {
   return (
     <CenteredContainer classes={"containerPlanetBackground"}>
       <MainNav />
-      <h5 className="planet-header">
-        <span className="pageNumber">01</span> Pick your destination
-      </h5>
+      <PageHeader number={"01"} message={"pick your destination"} />
       <img
         src={data.imgSrc}
         className="planet"
@@ -38,7 +37,7 @@ const Planet = () => {
 };
 
 export const loader = ({ params }) => {
-  const planet = getPlanetData(params.planetName);
+  const planet = getData({ name: params.planetName, type: "planet" });
   return planet;
 };
 

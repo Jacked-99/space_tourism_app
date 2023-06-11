@@ -1,0 +1,11 @@
+@use "../../Utils/variables" as v;
+
+.page-header {
+  margin: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: v.$white;
+  span {
+    margin-right: 1rem;
+  }
+}
