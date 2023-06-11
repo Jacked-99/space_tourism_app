@@ -1,10 +1,45 @@
 @use "../../Utils/mixins" as m;
+@use "../../Utils/variables" as v;
 .planet {
   aspect-ratio: 1;
-  max-width: 30vh;
+  max-width: 45vw;
 }
 .containerPlanetBackground {
   @include m.background(
     $url: "../../assets/destination/background-destination-mobile.jpg"
   );
+}
+
+.planet-header {
+  margin: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: v.$white;
+  span {
+    margin-right: 1rem;
+  }
+}
+.planet-name {
+  margin: 1rem 0 auto;
+  color: v.$white;
+  text-transform: uppercase;
+}
+.planet-desc {
+  margin-inline: 7.5%;
+  margin-top: 0;
+  color: v.$purple;
+  font-family: v.$fontBarlow;
+}
+
+.planet-detail {
+  margin-block: 0.5rem;
+  text-transform: uppercase;
+  color: v.$white;
+}
+.planet-detail-header {
+  margin-block: 0;
+  text-transform: uppercase;
+  font-family: v.$fontBarlowCond;
+  color: v.$purple;
+  font-weight: normal;
 }

@@ -14,8 +14,8 @@ const MobileNav = ({ closeNav, operMobile }) => {
         <img src={close}></img>
       </button>
       <ul className="navbar">
-        <NavLink>00 Home</NavLink>
-        <NavLink>01 Destination</NavLink>
+        <NavLink to={"/"}>00 Home</NavLink>
+        <NavLink to={"/planets/moon"}>01 Destination</NavLink>
         <NavLink>02 Crew</NavLink>
         <NavLink>03 Technology</NavLink>
       </ul>

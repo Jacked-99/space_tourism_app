@@ -2,7 +2,7 @@
   width: 60vw;
   height: calc(100vh - 2rem);
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(40.7742px);
+  backdrop-filter: blur(40px);
   z-index: 99;
   padding: 1rem;
   position: absolute;
@@ -47,7 +47,20 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: start;
+  animation: slideIn 0.5s ease-out 1;
 }
 .closed {
   display: none;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    position: absolute;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }

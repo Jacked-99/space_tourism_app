@@ -1,3 +1,4 @@
+@use "./Utils/variables" as v;
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -31,10 +32,10 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Bellefair", serif;
+  font-family: v.$fontBellefair;
 }
 h1 {
-  font-size: 6rem;
+  font-size: 5.5rem;
   line-height: 1.1;
 
   color: #fff;
@@ -42,7 +43,7 @@ h1 {
   text-transform: uppercase;
 }
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 h3 {
   font-size: 3rem;
@@ -52,7 +53,7 @@ h4 {
 }
 h5 {
   font-size: 1rem;
-  font-family: "Barlow", sans-serif;
+  font-family: v.$fontBarlow;
   letter-spacing: 0.2rem;
 }
 button {
@@ -83,6 +84,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.navbarNumber {
+  color: v.$white;
+}
+.pageNumber {
+  color: rgba(#979797, $alpha: 1);
+  font-family: v.$fontBarlowCond;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+.navlink:hover {
+  text-decoration: underline;
+  text-decoration-color: #979797;
 }
 // font-family: "Barlow", sans-serif;
 

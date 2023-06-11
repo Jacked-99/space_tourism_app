@@ -44,9 +44,10 @@ const getRestData = (name) => {
     travelTm = "3 years";
   }
   if (name == "titan") {
-    desc = `Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
-    the tallest planetary mountain in our solar system. It’s two and a half times 
-    the size of Everest!`;
+    desc = `The only moon known to have a dense atmosphere other than Earth, Titan 
+    is a home away from home (just a few hundred degrees colder!). As a 
+    bonus, you get striking views of the Rings of Saturn.
+  `;
     dist = "1.6 bil. km";
     travelTm = "7 years";
   }

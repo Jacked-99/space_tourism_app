@@ -1,0 +1,30 @@
+@use "../../Utils/variables" as v;
+
+.planetNavLinks {
+  font-family: v.$fontBarlow;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 75vw;
+  margin-inline: 15%;
+  margin-top: 1rem;
+  a {
+    color: v.$purple;
+  }
+  a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.7rem;
+    text-decoration-color: v.$gray;
+  }
+  .isActive {
+    color: v.$white;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.7rem;
+    text-decoration-color: v.$white;
+  }
+}

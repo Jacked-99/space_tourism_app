@@ -1,12 +1,33 @@
 import { NavLink } from "react-router-dom";
+import "./PlanetsNavbar.scss";
 
 const PlanetsNavbar = () => {
   return (
-    <div>
-      <NavLink to={"/planets/moon"}>MOON</NavLink>
-      <NavLink to={"/planets/mars"}>MARS</NavLink>
-      <NavLink to={"/planets/europa"}>EUROPA</NavLink>
-      <NavLink to={"/planets/titan"}>TITAN</NavLink>
+    <div className="planetNavLinks">
+      <NavLink
+        className={({ isActive }) => (isActive ? "isActive" : "")}
+        to={"/planets/moon"}
+      >
+        MOON
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "isActive" : "")}
+        to={"/planets/mars"}
+      >
+        MARS
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "isActive" : "")}
+        to={"/planets/europa"}
+      >
+        EUROPA
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "isActive" : "")}
+        to={"/planets/titan"}
+      >
+        TITAN
+      </NavLink>
     </div>
   );
 };
