@@ -1,0 +1,9 @@
+@use "../../Utils/mixins" as m;
+@use "../../Utils/variables" as v;
+
+.page-description {
+  margin-inline: 7.5%;
+  margin-top: 0;
+  color: v.$purple;
+  font-family: v.$fontBarlow;
+}

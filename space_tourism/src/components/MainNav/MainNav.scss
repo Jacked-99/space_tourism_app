@@ -6,7 +6,9 @@
   margin-top: 0;
   padding-top: 1rem;
 }
-
+.navbar-logo:hover {
+  filter: drop-shadow(0 0 0.5rem #fff);
+}
 .hamburger {
   background: none;
 }

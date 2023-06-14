@@ -6,7 +6,7 @@ import CenteredContainer from "../../components/CeneterdContainer/ConteredContai
 import MainNav from "../../components/MainNav/MainNav";
 import SectionDivider from "../../components/SectionDivider/SectionDivider";
 import PageHeader from "../../components/PageHeader/PageHeader";
-
+import DescriptionP from "../../components/Description/DescriptionP";
 const Planet = () => {
   const params = useParams();
   const data = useLoaderData();
@@ -22,7 +22,10 @@ const Planet = () => {
       />
       <PlanetsNavbar />
       <h2 className="planet-name">{params.planetName}</h2>
-      <p className="planet-desc">{data.description}</p>
+      <DescriptionP
+        className="planet-desc"
+        desc={data.description}
+      ></DescriptionP>
       <SectionDivider />
       <section>
         <h5 className="planet-detail-header">Avg. distance</h5>

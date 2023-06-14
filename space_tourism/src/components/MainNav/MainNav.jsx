@@ -13,7 +13,7 @@ const MainNav = () => {
   return (
     <div className="navbar-container">
       <NavLink to={"/"}>
-        <img src={Logo}></img>
+        <img src={Logo} alt="space-logo" className="navbar-logo"></img>
       </NavLink>
       <button
         className={`hamburger ${operMobile ? "closed" : ""}`}

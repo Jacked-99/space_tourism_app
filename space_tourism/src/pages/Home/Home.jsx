@@ -2,7 +2,9 @@ import CenteredContainer from "../../components/CeneterdContainer/ConteredContai
 import { NavLink } from "react-router-dom";
 import "./Home.scss";
 import MainNav from "../../components/MainNav/MainNav";
+import { useRef } from "react";
 const Home = () => {
+  const linkRef = useRef();
   return (
     <CenteredContainer classes={"containerHomeBackground"}>
       <MainNav />
@@ -15,8 +17,15 @@ const Home = () => {
         experience!
       </p>
 
-      <button className="Explore">
-        <NavLink to={"/planets/moon"}>Explore</NavLink>
+      <button
+        className="Explore"
+        onClick={() => {
+          linkRef.current.click;
+        }}
+      >
+        <NavLink to={"/planets/moon"} ref={linkRef}>
+          Explore
+        </NavLink>
       </button>
     </CenteredContainer>
   );

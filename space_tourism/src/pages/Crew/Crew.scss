@@ -2,10 +2,32 @@
 @use "../../Utils/mixins" as m;
 
 .crewContainer {
-  @include m.background(
-    $url: "../../assets/destination/background-destination-mobile.jpg"
-  );
+  @include m.background($url: "../../assets/crew/background-crew-mobile.jpg");
   > h2 {
     margin: 0;
   }
+}
+.crew-img {
+  max-width: 50vw;
+  margin-bottom: -2.4rem;
+  height: 30vh;
+}
+
+.crew-h5,
+.crew-h4 {
+  font-family: v.$fontBellefair;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.crew-h5 {
+  color: v.$gray;
+
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.crew-h4 {
+  font-size: 1.5rem;
+
+  color: v.$white;
 }
