@@ -1,0 +1,8 @@
+@use "../../Utils/variables" as v;
+@use "../../Utils/mixins" as m;
+
+.techContainer {
+  @include m.background(
+    $url: "../../assets/technology/background-technology-mobile.jpg"
+  );
+}

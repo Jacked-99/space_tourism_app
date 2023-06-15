@@ -1,0 +1,14 @@
+@use "../../Utils//variables" as v;
+.nav-btn {
+  border-radius: 50%;
+  padding: 0.8em 1.2em;
+  background-color: transparent;
+  margin-inline: 0.5rem;
+  border: 0.1rem solid rgba($color: v.$gray, $alpha: 0.5);
+  a {
+    color: v.$white;
+  }
+}
+.nav-btn:hover {
+  border: 0.1rem solid v.$white;
+}

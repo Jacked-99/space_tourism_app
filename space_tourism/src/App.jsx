@@ -6,6 +6,7 @@ import { loader as planetLoader } from "./pages/Destination/Planet";
 import Planet from "./pages/Destination/Planet";
 import Crew from "./pages/Crew/Crew";
 import { loader as crewLoader } from "./pages/Crew/Crew";
+import TechnologyPage from "./pages/Technology/Technology";
 
 function App() {
   const router = createBrowserRouter([
@@ -33,6 +34,15 @@ function App() {
 
           children: [
             { path: ":crewName", element: <Crew />, loader: crewLoader },
+          ],
+        },
+        {
+          path: "/tech",
+          children: [
+            {
+              path: ":techName",
+              element: <TechnologyPage />,
+            },
           ],
         },
       ],

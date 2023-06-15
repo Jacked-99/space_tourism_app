@@ -9,17 +9,19 @@
   a {
     display: inline-block;
     margin-inline: 2rem;
-    color: white;
   }
   a::after {
     position: absolute;
     content: "";
     width: 1rem;
     height: 1rem;
-    color: v.$white;
-    background-color: v.$gray;
+    background-color: rgba($color: v.$gray, $alpha: 0.5);
     border-radius: 50%;
   }
+  a:hover::after {
+    background-color: rgba($color: v.$gray, $alpha: 1);
+  }
+
   a.crew-nav-link-active::after {
     background-color: v.$white;
   }

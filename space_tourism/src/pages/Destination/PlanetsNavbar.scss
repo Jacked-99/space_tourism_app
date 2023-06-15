@@ -19,6 +19,7 @@
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.7rem;
     text-decoration-color: v.$gray;
+    animation: sperad 0.5s linear 1;
   }
   .isActive {
     color: v.$white;
@@ -28,3 +29,4 @@
     text-decoration-color: v.$white;
   }
 }
+// napisać funkcje roszerzania się paska po najechaniu kursorem na link
