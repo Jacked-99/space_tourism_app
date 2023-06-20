@@ -27,17 +27,27 @@ const TechnologyPage = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWith]);
+  }, [windowWith, data]);
 
   return (
     <CenteredContainer classes={"techContainer"}>
       <MainNav />
-      <img src={src} />
-      <PageHeader number={"03"} message={"Space launch 101"} />
-      <TechNavBar />
-      <h5>Terminology</h5>
-      <h2>{data.description.name}</h2>
-      <DescriptionP desc={data.description.info} />
+      {src == "" ? (
+        <Spiner />
+      ) : (
+        <>
+          <img
+            src={src}
+            alt={`${data.description.name}-img`}
+            className="tech-img"
+          />
+          <PageHeader number={"03"} message={"Space launch 101"} />
+          <TechNavBar />
+          <h5 className="tech-h5">Terminology</h5>
+          <h3 className="tech-h2">{data.description.name}</h3>
+          <DescriptionP desc={data.description.info} />
+        </>
+      )}
     </CenteredContainer>
   );
 };

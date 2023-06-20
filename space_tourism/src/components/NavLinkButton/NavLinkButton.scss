@@ -5,8 +5,12 @@
   background-color: transparent;
   margin-inline: 0.5rem;
   border: 0.1rem solid rgba($color: v.$gray, $alpha: 0.5);
-  a {
-    color: v.$white;
+  color: v.$white;
+}
+.isActive {
+  .nav-btn {
+    color: v.$dark;
+    background-color: v.$white;
   }
 }
 .nav-btn:hover {

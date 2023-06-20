@@ -6,3 +6,15 @@
     $url: "../../assets/technology/background-technology-mobile.jpg"
   );
 }
+.tech-img {
+  aspect-ratio: 1/2;
+  max-width: 100%;
+}
+.tech-h2 {
+  color: v.$white;
+  margin-block: 1rem;
+}
+.tech-h5 {
+  text-transform: uppercase;
+  color: v.$purple;
+}
