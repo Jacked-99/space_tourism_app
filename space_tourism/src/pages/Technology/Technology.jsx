@@ -1,5 +1,5 @@
 import CenteredContainer from "../../components/CeneterdContainer/ConteredContainer";
-import { useLoaderData, useParams } from "react-router";
+import { Await, useLoaderData } from "react-router";
 import MainNav from "../../components/MainNav/MainNav";
 import "./Technology.scss";
 import PageHeader from "../../components/PageHeader/PageHeader";
@@ -7,7 +7,7 @@ import getData from "../../Utils/getPlanetData/getData";
 import TechNavBar from "./TechNavBar";
 import Spiner from "../../components/Spinner/Spiner";
 import DescriptionP from "../../components/Description/DescriptionP";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const TechnologyPage = () => {
   const [src, setSrc] = useState("");
@@ -32,22 +32,25 @@ const TechnologyPage = () => {
   return (
     <CenteredContainer classes={"techContainer"}>
       <MainNav />
-      {src == "" ? (
-        <Spiner />
-      ) : (
-        <>
-          <img
-            src={src}
-            alt={`${data.description.name}-img`}
-            className="tech-img"
-          />
-          <PageHeader number={"03"} message={"Space launch 101"} />
-          <TechNavBar />
-          <h5 className="tech-h5">Terminology...</h5>
-          <h3 className="tech-h2">{data.description.name}</h3>
-          <DescriptionP desc={data.description.info} />
-        </>
-      )}
+      <Suspense fallback={<Spiner />}>
+        <Await
+          resolve={data}
+          children={(data) => (
+            <>
+              <img
+                src={src}
+                alt={`${data.description.name}-img`}
+                className="tech-img"
+              />
+              <PageHeader number={"03"} message={"Space launch 101"} />
+              <TechNavBar />
+              <h5 className="tech-h5">Terminology...</h5>
+              <h3 className="tech-h2">{data.description.name}</h3>
+              <DescriptionP desc={data.description.info} />
+            </>
+          )}
+        />
+      </Suspense>
     </CenteredContainer>
   );
 };
