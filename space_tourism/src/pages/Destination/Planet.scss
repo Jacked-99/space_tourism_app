@@ -2,7 +2,7 @@
 @use "../../Utils/variables" as v;
 .planet {
   aspect-ratio: 1;
-  max-width: 45vw;
+  max-width: 40vw;
 }
 .containerPlanetBackground {
   @include m.background(
@@ -17,7 +17,7 @@
 }
 
 .planet-detail {
-  margin-block: 0.5rem;
+  margin-block: 0.4rem;
   text-transform: uppercase;
   color: v.$white;
 }

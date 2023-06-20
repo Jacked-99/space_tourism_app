@@ -43,7 +43,7 @@ const TechnologyPage = () => {
           />
           <PageHeader number={"03"} message={"Space launch 101"} />
           <TechNavBar />
-          <h5 className="tech-h5">Terminology</h5>
+          <h5 className="tech-h5">Terminology...</h5>
           <h3 className="tech-h2">{data.description.name}</h3>
           <DescriptionP desc={data.description.info} />
         </>

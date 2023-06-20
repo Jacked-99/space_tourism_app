@@ -13,8 +13,12 @@
 .tech-h2 {
   color: v.$white;
   margin-block: 1rem;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 .tech-h5 {
+  font-weight: normal;
+  font-family: v.$fontBarlowCond;
   text-transform: uppercase;
   color: v.$purple;
 }
