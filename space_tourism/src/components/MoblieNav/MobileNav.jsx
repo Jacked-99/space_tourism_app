@@ -17,7 +17,7 @@ const MobileNav = ({ closeNav, operMobile }) => {
         <NavLink to={"/"}>00 Home</NavLink>
         <NavLink to={"/planets/moon"}>01 Destination</NavLink>
         <NavLink to={"/crew/commander"}>02 Crew</NavLink>
-        <NavLink to={"/tech/rocket"}>03 Technology</NavLink>
+        <NavLink to={"/tech/launch_vechicle"}>03 Technology</NavLink>
       </ul>
     </div>
   );

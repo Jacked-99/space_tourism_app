@@ -7,6 +7,7 @@ import Planet from "./pages/Destination/Planet";
 import Crew from "./pages/Crew/Crew";
 import { loader as crewLoader } from "./pages/Crew/Crew";
 import TechnologyPage from "./pages/Technology/Technology";
+import { loader as techLoader } from "./pages/Technology/Technology";
 
 function App() {
   const router = createBrowserRouter([
@@ -42,6 +43,7 @@ function App() {
             {
               path: ":techName",
               element: <TechnologyPage />,
+              loader: techLoader,
             },
           ],
         },

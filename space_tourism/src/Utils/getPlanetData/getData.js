@@ -2,6 +2,7 @@
 import getRestData from "./getRestOfData";
 import imgSrcs from "./ImagesSrcs";
 const getData = ({ name, type }) => {
+  console.log(`${name} ${type}`);
   const data = getRestData(name, type);
   const url = getImg(name);
 
