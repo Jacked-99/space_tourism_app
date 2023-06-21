@@ -14,19 +14,47 @@
 }
 .planet-nav-link {
   color: v.$purple;
+  font-size: 1.5rem;
+  position: relative;
 }
-.planet-nav-link:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 0.2rem;
-  text-underline-offset: 0.7rem;
-  text-decoration-color: v.$gray;
-  animation: sperad 0.5s linear 1;
+.planet-nav-link:hover::after {
+  position: absolute;
+  content: "";
+  height: 0.5vh;
+  width: 100%;
+  bottom: -150%;
+  left: 0;
+  background-color: rgba($color: v.$white, $alpha: 0.5);
+  animation: spread 0.3s linear 1;
 }
 .planet-link-isActive {
   color: v.$white;
-  text-decoration: underline;
-  text-decoration-thickness: 0.2rem;
-  text-underline-offset: 0.7rem;
-  text-decoration-color: v.$white;
+}
+.planet-link-isActive::after {
+  position: absolute;
+  content: "";
+  height: 0.5vh;
+  width: 100%;
+  bottom: -150%;
+  left: 0;
+  background-color: rgba($color: v.$white, $alpha: 1);
+}
+
+@keyframes spread {
+  0% {
+    width: 0;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .planetNavLinks {
+    max-width: 50vw;
+    margin-inline: 25%;
+    margin-block: 2rem;
+  }
 }
 // napisać funkcje roszerzania się paska po najechaniu kursorem na link

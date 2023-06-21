@@ -28,3 +28,17 @@
   color: v.$purple;
   font-weight: normal;
 }
+.planet-detail-warpper {
+}
+@media (min-width: 768px) {
+  .containerPlanetBackground {
+    @include m.background(
+      $url: "../../assets/destination/background-destination-tablet.jpg"
+    );
+  }
+  .planet-detail-warpper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
