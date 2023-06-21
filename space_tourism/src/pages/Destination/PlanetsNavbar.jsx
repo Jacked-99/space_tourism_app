@@ -2,34 +2,19 @@ import { NavLink } from "react-router-dom";
 import "./PlanetsNavbar.scss";
 
 const PlanetsNavbar = () => {
-  return (
-    <div className="planetNavLinks">
-      <NavLink
-        className={({ isActive }) => (isActive ? "isActive" : "")}
-        to={"/planets/moon"}
-      >
-        MOON
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "isActive" : "")}
-        to={"/planets/mars"}
-      >
-        MARS
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "isActive" : "")}
-        to={"/planets/europa"}
-      >
-        EUROPA
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "isActive" : "")}
-        to={"/planets/titan"}
-      >
-        TITAN
-      </NavLink>
-    </div>
-  );
+  const planets = ["MOON", "MARS", "EUROPA", "TITAN"];
+  const planetsMap = planets.map((planet) => (
+    <NavLink
+      key={planets.indexOf(planet)}
+      className={({ isActive, isPending }) =>
+        isActive ? "planet-nav-link planet-link-isActive" : "planet-nav-link"
+      }
+      to={`/planets/${planet.toLowerCase()}`}
+    >
+      {planet}
+    </NavLink>
+  ));
+  return <div className="planetNavLinks">{planetsMap}</div>;
 };
 
 export default PlanetsNavbar;

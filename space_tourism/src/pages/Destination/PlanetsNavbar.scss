@@ -9,24 +9,24 @@
   justify-content: space-evenly;
   align-items: center;
   max-width: 75vw;
-  margin-inline: 15%;
+  margin-inline: 10%;
   margin-top: 1rem;
-  a {
-    color: v.$purple;
-  }
-  a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 0.2rem;
-    text-underline-offset: 0.7rem;
-    text-decoration-color: v.$gray;
-    animation: sperad 0.5s linear 1;
-  }
-  .isActive {
-    color: v.$white;
-    text-decoration: underline;
-    text-decoration-thickness: 0.2rem;
-    text-underline-offset: 0.7rem;
-    text-decoration-color: v.$white;
-  }
+}
+.planet-nav-link {
+  color: v.$purple;
+}
+.planet-nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.7rem;
+  text-decoration-color: v.$gray;
+  animation: sperad 0.5s linear 1;
+}
+.planet-link-isActive {
+  color: v.$white;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.7rem;
+  text-decoration-color: v.$white;
 }
 // napisać funkcje roszerzania się paska po najechaniu kursorem na link

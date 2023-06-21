@@ -32,7 +32,6 @@ const Planet = () => {
       ) : (
         <img src={src} className="planet" alt={`image-${params.planetName}`} />
       )}
-
       <PlanetsNavbar />
       <h2 className="planet-name">{params.planetName}</h2>
       <DescriptionP

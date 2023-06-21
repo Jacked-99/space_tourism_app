@@ -6,7 +6,9 @@ const NavLinkButton = ({ link, text }) => {
   return (
     <NavLink
       ref={linkRef}
-      className={({ isActive, isPending }) => (isActive ? "isActive" : "")}
+      className={({ isActive, isPending }) =>
+        isActive ? "nav-btn-isActive" : ""
+      }
       to={link}
     >
       <button
