@@ -40,15 +40,13 @@ const Planet = () => {
         desc={data.description}
       ></DescriptionP>
       <SectionDivider />
-      <section className="planet-detail-container">
-        <section>
-          <h5 className="planet-detail-header">Avg. distance</h5>
-          <h4 className="planet-detail">{data.distance}</h4>
-        </section>
-        <section>
-          <h5 className="planet-detail-header">est. travel time</h5>
-          <h4 className="planet-detail">{data.travelTime}</h4>
-        </section>
+      <section>
+        <h5 className="planet-detail-header">Avg. distance</h5>
+        <h4 className="planet-detail">{data.distance}</h4>
+      </section>
+      <section>
+        <h5 className="planet-detail-header">est. travel time</h5>
+        <h4 className="planet-detail">{data.travelTime}</h4>
       </section>
     </CenteredContainer>
   );

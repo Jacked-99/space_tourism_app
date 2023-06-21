@@ -11,9 +11,8 @@
   filter: drop-shadow(0 0 0.5rem v.$white);
 }
 .navbar-main {
-  display: none;
   backdrop-filter: blur(40px);
-
+  display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
@@ -74,8 +73,5 @@
   }
   .main-link {
     display: inline;
-  }
-  .navbar-main {
-    display: flex;
   }
 }
