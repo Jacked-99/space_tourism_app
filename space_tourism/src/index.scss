@@ -101,3 +101,14 @@ button:focus-visible {
 // font-family: "Barlow", sans-serif;
 
 // font-family: "Barlow Condensed", sans-serif;
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 9rem;
+    font-weight: 400;
+  }
+  h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}

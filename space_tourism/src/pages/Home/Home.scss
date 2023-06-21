@@ -1,11 +1,13 @@
+@use "../../Utils/variables" as v;
 .info {
   margin-inline: 1rem;
   margin-block: 0;
-  color: #fff;
+  color: v.$purple;
   &.tech {
     text-transform: uppercase;
     color: #d0d6f9;
     margin-top: 2rem;
+    font-family: v.$fontBarlowCond;
   }
 }
 .home_title {
@@ -19,6 +21,7 @@
   background-repeat: no-repeat;
   top: 0;
 }
+
 .Explore {
   border-radius: 100%;
   width: 20vh;
@@ -62,5 +65,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .containerHomeBackground {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+  .content-wraper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 50vh;
+    margin: 0 15vh;
+    margin-top: 10vh;
   }
 }

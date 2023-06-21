@@ -15,6 +15,44 @@ const MainNav = () => {
       <NavLink to={"/"}>
         <img src={Logo} alt="space-logo" className="navbar-logo"></img>
       </NavLink>
+      <div className="navbar-main">
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive ? "main-link isActive" : "main-link"
+          }
+          to={"/"}
+        >
+          <span className="link-number"></span>
+          Home
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive ? "main-link isActive" : "main-link"
+          }
+          to={"/planets/moon"}
+        >
+          <span className="link-number"></span>
+          Destination
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive ? "main-link isActive" : "main-link"
+          }
+          to={"/crew/commander"}
+        >
+          <span className="link-number"></span>
+          Crew
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive ? "main-link isActive" : "main-link"
+          }
+          to={"/tech/launch_vechicle"}
+        >
+          <span className="link-number"></span>
+          Technology
+        </NavLink>
+      </div>
       <button
         className={`hamburger ${operMobile ? "closed" : ""}`}
         onClick={() => {
