@@ -1,4 +1,4 @@
-import { Await, useParams, useLoaderData, useNavigate } from "react-router";
+import { useParams, useLoaderData, useNavigate } from "react-router";
 import CenteredContainer from "../../components/CeneterdContainer/ConteredContainer";
 import getData from "../../Utils/getPlanetData/getData";
 import "./Crew.scss";
@@ -27,31 +27,25 @@ const Crew = () => {
   }, [parms.crewName]);
 
   return (
-    <CenteredContainer classes={"crewContainer"}>
-      <MainNav />
-      <Suspense fallback={<Spiner />}>
-        <Await
-          resolve={data}
-          children={(data) => (
-            <>
-              <PageHeader number={"02"} message={"Meet your crew"} />
+    <Suspense fallback={<Spiner />}>
+      <CenteredContainer classes={"crewContainer"}>
+        <MainNav />
 
-              <img
-                src={data.imgSrc}
-                className="crew-img"
-                alt={`${data.description.role}-image`}
-              />
-              <SectionDivider />
-              <CrewNavbar />
-              <h5 className="crew-h5">{data.description.role} </h5>
-              <h4 className="crew-h4">{data.description.name}</h4>
+        <PageHeader number={"02"} message={"Meet your crew"} />
 
-              <DescriptionP desc={data.description.info} />
-            </>
-          )}
+        <img
+          src={data.imgSrc}
+          className="crew-img"
+          alt={`${data.description.role}-image`}
         />
-      </Suspense>
-    </CenteredContainer>
+        <SectionDivider />
+        <CrewNavbar />
+        <h5 className="crew-h5">{data.description.role} </h5>
+        <h4 className="crew-h4">{data.description.name}</h4>
+
+        <DescriptionP desc={data.description.info} />
+      </CenteredContainer>
+    </Suspense>
   );
 };
 

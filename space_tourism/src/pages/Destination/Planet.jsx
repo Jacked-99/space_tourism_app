@@ -1,4 +1,4 @@
-import { Await, useParams, useLoaderData } from "react-router";
+import { useParams, useLoaderData } from "react-router";
 import getData from "../../Utils/getPlanetData/getData";
 import PlanetsNavbar from "./PlanetsNavbar";
 import "./Planet.scss";
@@ -10,25 +10,29 @@ import DescriptionP from "../../components/Description/DescriptionP";
 import { Suspense, useEffect, useState } from "react";
 import Spiner from "../../components/Spinner/Spiner";
 const Planet = () => {
+  const [src, setSrc] = useState("");
   const params = useParams();
   const data = useLoaderData();
+  useEffect(() => {
+    const imgSrc = async () => {
+      const response = await data;
+      const imgData = await response.imgSrc;
+      setSrc(imgData);
+    };
+    imgSrc();
+    return () => {};
+  }, [src, data]);
 
   return (
     <CenteredContainer classes={"containerPlanetBackground"}>
       <MainNav />
       <PageHeader number={"01"} message={"pick your destination"} />
-      <Suspense fallback={<Spiner />}>
-        <Await
-          resolve={data}
-          children={(data) => (
-            <img
-              src={data.imgSrc}
-              className="planet"
-              alt={`image-${params.planetName}`}
-            />
-          )}
-        />
-      </Suspense>
+      {src == "" ? (
+        <Spiner />
+      ) : (
+        <img src={src} className="planet" alt={`image-${params.planetName}`} />
+      )}
+
       <PlanetsNavbar />
       <h2 className="planet-name">{params.planetName}</h2>
       <DescriptionP
