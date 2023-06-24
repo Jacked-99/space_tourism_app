@@ -26,29 +26,39 @@ const Planet = () => {
   return (
     <CenteredContainer classes={"containerPlanetBackground"}>
       <MainNav />
-      <PageHeader number={"01"} message={"pick your destination"} />
-      {src == "" ? (
-        <Spiner />
-      ) : (
-        <img src={src} className="planet" alt={`image-${params.planetName}`} />
-      )}
-      <PlanetsNavbar />
-      <h2 className="planet-name">{params.planetName}</h2>
-      <DescriptionP
-        classes={"planet-desc"}
-        desc={data.description}
-      ></DescriptionP>
-      <SectionDivider />
-      <section className="planet-detail-warpper">
-        <section>
-          <h5 className="planet-detail-header">Avg. distance</h5>
-          <h4 className="planet-detail">{data.distance}</h4>
+      <main className="planet-content">
+        <section className="planet-content-section">
+          <PageHeader number={"01"} message={"pick your destination"} />
+          {src == "" ? (
+            <Spiner />
+          ) : (
+            <img
+              src={src}
+              className="planet"
+              alt={`image-${params.planetName}`}
+            />
+          )}
         </section>
-        <section>
-          <h5 className="planet-detail-header">est. travel time</h5>
-          <h4 className="planet-detail">{data.travelTime}</h4>
+        <section className="planet-content-section">
+          <PlanetsNavbar />
+          <h2 className="planet-name">{params.planetName}</h2>
+          <DescriptionP
+            classes={"planet-desc"}
+            desc={data.description}
+          ></DescriptionP>
+          <SectionDivider />
+          <section className="planet-detail-warpper">
+            <section>
+              <h5 className="planet-detail-header">Avg. distance</h5>
+              <h4 className="planet-detail">{data.distance}</h4>
+            </section>
+            <section>
+              <h5 className="planet-detail-header">est. travel time</h5>
+              <h4 className="planet-detail">{data.travelTime}</h4>
+            </section>
+          </section>
         </section>
-      </section>
+      </main>
     </CenteredContainer>
   );
 };

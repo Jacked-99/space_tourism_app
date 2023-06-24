@@ -29,8 +29,7 @@
   color: v.$purple;
   font-weight: normal;
 }
-.planet-detail-warpper {
-}
+
 .planet-desc {
   margin-inline: 5%;
 }
@@ -51,5 +50,47 @@
     width: 65vw;
 
     margin-inline: 10rem;
+  }
+}
+@media (min-width: 1270px) {
+  .containerPlanetBackground {
+    @include m.background(
+      $url: "../../assets/destination/background-destination-desktop.jpg"
+    );
+  }
+  .planet-content {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    flex-direction: row;
+  }
+  .planet-content-section {
+    .page-header {
+      margin-left: 10rem;
+    }
+  }
+  .planet-content-section:last-of-type {
+    display: grid;
+    grid-template-columns: 100%;
+    place-items: start;
+    grid-column: 2/3;
+    max-width: 100%;
+    place-self: end;
+    hr {
+      width: 75%;
+      place-self: start;
+      margin: 2rem 0;
+    }
+  }
+  .planet-desc {
+    max-width: 55%;
+    margin: 1rem 0;
+    text-align: left;
+    font-size: 1.1rem;
+    max-height: 10vh;
+  }
+  .planet-detail-warpper {
+    min-width: 50%;
+    justify-content: space-between;
+    text-align: left;
   }
 }

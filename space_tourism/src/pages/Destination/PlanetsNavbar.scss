@@ -57,6 +57,18 @@
     height: 0.5vh;
   }
 }
+@media (min-width: 1270px) {
+  .planetNavLinks {
+    font-size: 1rem;
+    margin: 2rem 0;
+  }
+  .planet-nav-link {
+    margin-inline: 1rem;
+  }
+  .planet-nav-link:first-of-type {
+    margin-left: 0;
+  }
+}
 
 @keyframes spread {
   0% {
