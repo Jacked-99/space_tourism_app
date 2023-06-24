@@ -33,8 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://space-tourism-dq33vvrpt-jacked-99.vercel.app/)
 
 ## My process
 
@@ -46,7 +45,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [React-router] (https://reactrouter.com/en/main) - For routing
+- [React-router](https://reactrouter.com/en/main/) - For routing
 - [Scss](https://sass-lang.com/) - For styles
 - [Vite](https://vitejs.dev/)
 
