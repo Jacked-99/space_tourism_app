@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./crewNavbar.scss";
+import "./CrewNavbar.scss";
 import crew from "../../Utils/CrewCount/Crew";
 const CrewNavbar = () => {
   const crewMap = crew.map((crewman) => (
