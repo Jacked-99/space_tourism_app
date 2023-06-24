@@ -29,30 +29,35 @@ const Crew = () => {
   return (
     <Suspense fallback={<Spiner />}>
       <CenteredContainer classes={"crewContainer"}>
-        <MainNav />
+        <main>
+          <MainNav />
 
-        <PageHeader number={"02"} message={"Meet your crew"} />
-        <div className="crew-content">
-          <section className="crew-image">
-            <img
-              src={data.imgSrc}
-              className="crew-img"
-              alt={`${data.description.role}-image`}
-            />
-            <section className="crew-divider">
-              <SectionDivider />
+          <PageHeader number={"02"} message={"Meet your crew"} />
+          <div className="crew-content">
+            <section className="crew-image">
+              <img
+                src={data.imgSrc}
+                className="crew-img"
+                alt={`${data.description.role}-image`}
+              />
+              <section className="crew-divider">
+                <SectionDivider />
+              </section>
+              <section className="crew-navbar">
+                <CrewNavbar />
+              </section>
             </section>
-            <section className="crew-navbar">
-              <CrewNavbar />
-            </section>
-          </section>
-          <section>
-            <h5 className="crew-h5">{data.description.role} </h5>
-            <h4 className="crew-h4">{data.description.name}</h4>
+            <section>
+              <h5 className="crew-h5">{data.description.role} </h5>
+              <h4 className="crew-h4">{data.description.name}</h4>
 
-            <DescriptionP classes={"crew-desc"} desc={data.description.info} />
-          </section>
-        </div>
+              <DescriptionP
+                classes={"crew-desc"}
+                desc={data.description.info}
+              />
+            </section>
+          </div>
+        </main>
       </CenteredContainer>
     </Suspense>
   );

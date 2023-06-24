@@ -23,18 +23,30 @@
     }
     a:hover,
     a:focus {
-      animation: fill 0.5s ease-in 1;
+      animation: fill 3s ease-in infinite;
     }
   }
 }
 @keyframes fill {
   0% {
-    background-color: transparent;
+    border-top-color: v.$dark;
+  }
+  25% {
+    border-top-color: v.$white;
+    border-right-color: v.$dark;
   }
   50% {
-    background-color: rgba($color: v.$white, $alpha: 0.3);
+    border-top-color: v.$white;
+    border-right-color: v.$white;
+    border-bottom-color: v.$dark;
+  }
+  75% {
+    border-top-color: v.$white;
+    border-right-color: v.$white;
+    border-bottom-color: v.$white;
+    border-left-color: v.$dark;
   }
   100% {
-    background-color: transparent;
+    border-color: v.$white;
   }
 }

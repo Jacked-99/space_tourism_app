@@ -1,4 +1,5 @@
 @use "../../Utils/variables" as v;
+@use "../../Utils/mixins" as m;
 .info {
   margin-inline: 1rem;
   margin-block: 0;
@@ -78,6 +79,7 @@
     row-gap: 0;
     place-items: end start;
     text-align: left;
+    @include m.show($time: 2s);
   }
   .home_title {
     grid-row: 2/3;
