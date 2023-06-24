@@ -72,8 +72,8 @@
   .content-wraper {
     max-width: max-content;
     width: 100vw;
-    margin: auto;
-    transform: translateY(55%);
+    margin: 10rem auto;
+
     grid-template-columns: repeat(2, 35vw);
     row-gap: 0;
     place-items: end start;

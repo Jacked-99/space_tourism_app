@@ -75,3 +75,15 @@
     width: 75vw;
   }
 }
+@media (min-width: 1270px) {
+  .crew-content {
+    display: grid;
+    grid-template-columns: repeat(2, 30vw);
+  }
+  .crew-image {
+    grid-column: 2;
+  }
+  .crew-navbar {
+    grid-column: 1;
+  }
+}

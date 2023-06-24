@@ -40,21 +40,23 @@ const TechnologyPage = () => {
           children={(src) => (
             <div className="tech-content">
               <PageHeader number={"03"} message={"Space launch 101"} />
-              <img
-                src={src}
-                alt={`${data.description.name}-img`}
-                className="tech-img"
-              />
-
-              <TechNavBar />
-              <section>
-                <h5 className="tech-h5">Terminology...</h5>
-                <h3 className="tech-h3">{data.description.name}</h3>
-                <DescriptionP
-                  classes={"tech-desc"}
-                  desc={data.description.info}
+              <div className="tech-content-warpper">
+                <img
+                  src={src}
+                  alt={`${data.description.name}-img`}
+                  className="tech-img"
                 />
-              </section>
+
+                <TechNavBar />
+                <section className="tech-info">
+                  <h5 className="tech-h5">Terminology...</h5>
+                  <h3 className="tech-h3">{data.description.name}</h3>
+                  <DescriptionP
+                    classes={"tech-desc"}
+                    desc={data.description.info}
+                  />
+                </section>
+              </div>
             </div>
           )}
         ></Await>
