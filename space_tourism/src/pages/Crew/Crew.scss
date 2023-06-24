@@ -35,6 +35,12 @@
 .crew-content {
   display: grid;
   grid-template-columns: 1;
+  max-height: 100vh;
+  place-items: center;
+  hr {
+    width: 100vw;
+    margin-top: 2.5rem;
+  }
 }
 .crew-desc {
   margin-inline: 5%;
@@ -43,6 +49,21 @@
   .crew-content {
     width: 80vw;
     margin-inline: 10%;
+    hr {
+      display: none;
+    }
+    .crew-nav {
+      grid-row: 3;
+    }
+    .page-header {
+      place-self: start;
+      margin-bottom: 3rem;
+    }
+    .crew-info-desc {
+      place-self: start start;
+
+      margin-bottom: 1rem;
+    }
   }
   .crew-image {
     display: flex;
@@ -74,16 +95,53 @@
     height: 5rem;
     width: 75vw;
   }
+  .crew-h5 {
+    margin-top: 1rem;
+  }
 }
 @media (min-width: 1270px) {
   .crew-content {
-    display: grid;
+    @include m.show($time: 1s);
+    margin: 10rem 25%;
+    margin-bottom: 0;
+
+    place-items: start;
     grid-template-columns: repeat(2, 30vw);
+    .page-header {
+      margin-bottom: 10rem;
+      margin-left: 0;
+      grid-column: 1;
+      grid-row: 1;
+    }
   }
   .crew-image {
     grid-column: 2;
   }
-  .crew-navbar {
+  .crew-img {
+    right: 10rem;
+    height: 70vh;
+  }
+
+  .crew-info-desc {
+    text-align: left;
+    margin-top: 10rem;
     grid-column: 1;
+    grid-row: 1;
+    place-self: start;
+    max-width: 100%;
+    h4 {
+      font-size: 2rem;
+    }
+    p {
+      max-width: inherit;
+      margin: 0;
+      margin-bottom: 5rem;
+      font-size: 1.1rem;
+    }
+    .crew-navbar {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 10rem;
+    }
   }
 }

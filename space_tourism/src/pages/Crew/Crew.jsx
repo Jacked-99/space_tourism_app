@@ -31,23 +31,20 @@ const Crew = () => {
       <CenteredContainer classes={"crewContainer"}>
         <main>
           <MainNav />
-
-          <PageHeader number={"02"} message={"Meet your crew"} />
           <div className="crew-content">
-            <section className="crew-image">
-              <img
-                src={data.imgSrc}
-                className="crew-img"
-                alt={`${data.description.role}-image`}
-              />
-              <section className="crew-divider">
-                <SectionDivider />
-              </section>
-              <section className="crew-navbar">
-                <CrewNavbar />
-              </section>
-            </section>
-            <section>
+            <PageHeader number={"02"} message={"Meet your crew"} />
+
+            <img
+              src={data.imgSrc}
+              className="crew-img"
+              alt={`${data.description.role}-image`}
+            />
+
+            <SectionDivider className="crew-divider" />
+
+            <CrewNavbar />
+
+            <section className="crew-info-desc">
               <h5 className="crew-h5">{data.description.role} </h5>
               <h4 className="crew-h4">{data.description.name}</h4>
 
