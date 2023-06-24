@@ -2,23 +2,14 @@ import { NavLink } from "react-router-dom";
 import "./NavLinkButton.scss";
 import { useRef, useState } from "react";
 const NavLinkButton = ({ link, text }) => {
-  const linkRef = useRef(null);
   return (
     <NavLink
-      ref={linkRef}
-      className={({ isActive, isPending }) =>
-        isActive ? "nav-btn-isActive" : ""
+      className={({ isActive }) =>
+        isActive ? "nav-btn nav-btn-isActive" : "nav-btn"
       }
       to={link}
     >
-      <button
-        className={`nav-btn`}
-        onClick={() => {
-          linkRef.current.click();
-        }}
-      >
-        {text}
-      </button>
+      {text}
     </NavLink>
   );
 };

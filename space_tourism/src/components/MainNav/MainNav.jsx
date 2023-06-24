@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+
 import { useState } from "react";
 import Logo from "../../assets/shared/logo.svg";
 import Hamburger from "../../assets/shared/icon-hamburger.svg";
@@ -10,6 +11,8 @@ const MainNav = () => {
   const closeNav = () => {
     setOpenMobile(false);
   };
+  const params = useParams();
+
   return (
     <div className="navbar-container">
       <NavLink to={"/"}>
@@ -27,7 +30,7 @@ const MainNav = () => {
         </NavLink>
         <NavLink
           className={({ isActive, isPending }) =>
-            isActive ? "main-link isActive" : "main-link"
+            params.planetName || isActive ? "main-link isActive" : "main-link"
           }
           to={"/planets/moon"}
         >
@@ -36,7 +39,7 @@ const MainNav = () => {
         </NavLink>
         <NavLink
           className={({ isActive, isPending }) =>
-            isActive ? "main-link isActive" : "main-link"
+            params.crewName || isActive ? "main-link isActive" : "main-link"
           }
           to={"/crew/commander"}
         >
@@ -45,7 +48,7 @@ const MainNav = () => {
         </NavLink>
         <NavLink
           className={({ isActive, isPending }) =>
-            isActive ? "main-link isActive" : "main-link"
+            params.techName || isActive ? "main-link isActive" : "main-link"
           }
           to={"/tech/launch_vechicle"}
         >

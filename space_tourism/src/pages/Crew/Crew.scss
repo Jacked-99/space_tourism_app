@@ -31,3 +31,34 @@
 
   color: v.$white;
 }
+.crew-content {
+  display: grid;
+  grid-template-columns: 1;
+}
+@media (min-width: 768px) {
+  .crew-content {
+    width: 80vw;
+    margin-inline: 10%;
+  }
+  .crew-image {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    grid-row: 2;
+    height: 50vh;
+  }
+  .crew-navbar {
+    margin-top: 3rem;
+  }
+  .crew-img {
+    min-height: 40vh;
+    position: relative;
+  }
+  .crew-divider {
+    display: none;
+  }
+  .crew-h4 {
+    font-size: 1.5em;
+  }
+}

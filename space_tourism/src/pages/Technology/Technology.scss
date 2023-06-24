@@ -6,9 +6,14 @@
     $url: "../../assets/technology/background-technology-mobile.jpg"
   );
 }
+.tech-content {
+  max-height: 100vh;
+  display: grid;
+  justify-content: center;
+}
 .tech-img {
   aspect-ratio: 1/2;
-  max-width: 100%;
+  place-self: center;
 }
 .tech-h2 {
   color: v.$white;

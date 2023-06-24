@@ -9,6 +9,7 @@ import TechNavBar from "./TechNavBar";
 import Spiner from "../../components/Spinner/Spiner";
 import DescriptionP from "../../components/Description/DescriptionP";
 import { Suspense, useEffect, useState } from "react";
+import NavLinkButton from "../../components/NavLinkButton/NavLinkButton";
 
 const TechnologyPage = () => {
   const [src, setSrc] = useState("");
@@ -20,7 +21,7 @@ const TechnologyPage = () => {
       setWindowWith(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
-    if (windowWith <= 800) {
+    if (windowWith <= 900) {
       setSrc(data.imgSrc.landscape);
     } else {
       setSrc(data.imgSrc.portrait);
@@ -37,18 +38,21 @@ const TechnologyPage = () => {
         <Await
           resolve={src}
           children={(src) => (
-            <>
+            <div className="tech-content">
+              <PageHeader number={"03"} message={"Space launch 101"} />
               <img
                 src={src}
                 alt={`${data.description.name}-img`}
                 className="tech-img"
               />
-              <PageHeader number={"03"} message={"Space launch 101"} />
+
               <TechNavBar />
-              <h5 className="tech-h5">Terminology...</h5>
-              <h3 className="tech-h2">{data.description.name}</h3>
-              <DescriptionP desc={data.description.info} />
-            </>
+              <section>
+                <h5 className="tech-h5">Terminology...</h5>
+                <h3 className="tech-h2">{data.description.name}</h3>
+                <DescriptionP desc={data.description.info} />
+              </section>
+            </div>
           )}
         ></Await>
       </Suspense>
