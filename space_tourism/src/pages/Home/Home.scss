@@ -65,9 +65,42 @@
     margin-top: 10vh;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1270px) {
   .containerHomeBackground {
     background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
+  .content-wraper {
+    max-width: max-content;
+    width: 100vw;
+    margin: auto;
+    transform: translateY(55%);
+    grid-template-columns: repeat(2, 35vw);
+    row-gap: 0;
+    place-items: end start;
+    text-align: left;
+  }
+  .home_title {
+    grid-row: 2/3;
+    margin: 0;
+    text-align: left;
+    place-self: center start;
+  }
+  .Explore {
+    grid-row: 1/3;
+    width: 25vh;
+    height: 25vh;
+    font-size: 2rem;
+  }
+  .info {
+    min-height: 10vh;
+    font-size: 1.2rem;
+
+    &.tech {
+      text-align: left;
+      font-size: 1.8rem;
+
+      min-height: 0;
+    }
   }
 }
 

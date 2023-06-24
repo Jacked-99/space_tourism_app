@@ -17,17 +17,17 @@ const Home = () => {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
+        <button
+          className="Explore"
+          onClick={() => {
+            linkRef.current.click;
+          }}
+        >
+          <NavLink to={"/planets/moon"} ref={linkRef}>
+            Explore
+          </NavLink>
+        </button>
       </div>
-      <button
-        className="Explore"
-        onClick={() => {
-          linkRef.current.click;
-        }}
-      >
-        <NavLink to={"/planets/moon"} ref={linkRef}>
-          Explore
-        </NavLink>
-      </button>
     </CenteredContainer>
   );
 };
