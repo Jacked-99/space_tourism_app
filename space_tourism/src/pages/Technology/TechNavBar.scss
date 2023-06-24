@@ -1,0 +1,52 @@
+@use "../../Utils/variables" as v;
+.tech-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .tech-navbar {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .tech-navbar {
+    flex-direction: column;
+    a {
+      width: 10vh;
+      height: 10vh;
+      font-size: 2rem;
+    }
+    a:hover,
+    a:focus {
+      animation: fill 3s ease-in-out infinite;
+    }
+  }
+}
+@keyframes fill {
+  0% {
+    border-top-color: v.$dark;
+  }
+  25% {
+    border-top-color: v.$white;
+    border-right-color: v.$dark;
+  }
+  50% {
+    border-top-color: v.$white;
+    border-right-color: v.$white;
+    border-bottom-color: v.$dark;
+  }
+  75% {
+    border-top-color: v.$white;
+    border-right-color: v.$white;
+    border-bottom-color: v.$white;
+    border-left-color: v.$dark;
+  }
+  100% {
+    border-color: v.$white;
+  }
+}

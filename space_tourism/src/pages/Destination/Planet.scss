@@ -1,0 +1,97 @@
+@use "../../Utils/mixins" as m;
+@use "../../Utils/variables" as v;
+.planet {
+  aspect-ratio: 1;
+  max-width: 40vw;
+}
+.containerPlanetBackground {
+  @include m.background(
+    $url: "../../assets/destination/background-destination-mobile.jpg"
+  );
+}
+
+.planet-name {
+  margin: 0.5rem 0 auto;
+
+  color: v.$white;
+  text-transform: uppercase;
+}
+
+.planet-detail {
+  margin-block: 0.4rem;
+  text-transform: uppercase;
+  color: v.$white;
+}
+.planet-detail-header {
+  margin-block: 0;
+  text-transform: uppercase;
+  font-family: v.$fontBarlowCond;
+  color: v.$purple;
+  font-weight: normal;
+}
+
+.planet-desc {
+  margin-inline: 5%;
+}
+
+@media (min-width: 768px) {
+  .containerPlanetBackground {
+    @include m.background(
+      $url: "../../assets/destination/background-destination-tablet.jpg"
+    );
+  }
+  .planet-detail-warpper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .planet-desc {
+    max-height: 9rem;
+    width: 65vw;
+
+    margin-inline: 10rem;
+  }
+}
+@media (min-width: 1270px) {
+  .containerPlanetBackground {
+    @include m.background(
+      $url: "../../assets/destination/background-destination-desktop.jpg"
+    );
+  }
+  .planet-content {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    flex-direction: row;
+    @include m.show($time: 2s);
+  }
+  .planet-content-section {
+    .page-header {
+      margin-left: 10rem;
+    }
+  }
+  .planet-content-section:last-of-type {
+    display: grid;
+    grid-template-columns: 100%;
+    place-items: start;
+    grid-column: 2/3;
+    max-width: 100%;
+    place-self: end;
+    hr {
+      width: 75%;
+      place-self: start;
+      margin: 2rem 0;
+    }
+  }
+  .planet-desc {
+    max-width: 55%;
+    margin: 1rem 0;
+    text-align: left;
+    font-size: 1.1rem;
+    max-height: 10vh;
+  }
+  .planet-detail-warpper {
+    min-width: 50%;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

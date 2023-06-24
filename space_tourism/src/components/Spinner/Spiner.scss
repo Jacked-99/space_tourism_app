@@ -1,0 +1,38 @@
+.spinner {
+  position: relative;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  margin-inline: 25%;
+  border: 0.5rem solid;
+  border-color: #fff #fff #000 #000;
+  animation: spin 1s linear infinite;
+}
+
+.spinner::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  margin-inline: 25%;
+  border: 0.5rem solid;
+  border-color: #000 #000 #fff #fff;
+
+  margin: auto;
+  transform-origin: center center;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

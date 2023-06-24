@@ -1,0 +1,83 @@
+@use "../../Utils/variables" as v;
+
+.planetNavLinks {
+  font-family: v.$fontBarlow;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 75vw;
+  margin-inline: 10%;
+  margin-top: 1rem;
+}
+.planet-nav-link {
+  color: v.$purple;
+
+  position: relative;
+}
+.planet-nav-link:hover::after {
+  position: absolute;
+  content: "";
+  height: 0.3vh;
+  width: 100%;
+  bottom: -50%;
+  left: 0;
+  background-color: rgba($color: v.$white, $alpha: 0.5);
+  animation: spread 0.3s linear 1;
+}
+.planet-link-isActive {
+  color: v.$white;
+}
+.planet-link-isActive::after {
+  position: absolute;
+  content: "";
+  height: 0.3vh;
+  width: 100%;
+  bottom: -50%;
+  left: 0;
+  background-color: rgba($color: v.$white, $alpha: 1);
+}
+
+@media (min-width: 768px) {
+  .planetNavLinks {
+    max-width: 50vw;
+    margin-inline: 25%;
+    margin-block: 2rem;
+    font-size: 1.5rem;
+  }
+  .planet-nav-link:hover::after {
+    height: 0.5vh;
+
+    bottom: -150%;
+  }
+  .planet-link-isActive::after {
+    bottom: -150%;
+    height: 0.5vh;
+  }
+}
+@media (min-width: 1270px) {
+  .planetNavLinks {
+    font-size: 1rem;
+    margin: 2rem 0;
+  }
+  .planet-nav-link {
+    margin-inline: 1rem;
+  }
+  .planet-nav-link:first-of-type {
+    margin-left: 0;
+  }
+}
+
+@keyframes spread {
+  0% {
+    width: 0;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+// napisać funkcje roszerzania się paska po najechaniu kursorem na link

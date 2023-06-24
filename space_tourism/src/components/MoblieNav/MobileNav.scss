@@ -1,0 +1,66 @@
+.mobile_navigation {
+  width: 60vw;
+  height: calc(100vh - 2rem);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40px);
+  z-index: 99;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  .close {
+    border: none;
+    background: none;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    > :hover {
+      color: #fff;
+    }
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family: "Barlow Condensed", sans-serif;
+    padding: 1rem;
+
+    > * {
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      margin-block: 0.7rem;
+    }
+    > a:hover {
+      text-decoration: underline;
+      text-decoration-color: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+}
+button:hover {
+  border: none;
+  color: #fff;
+}
+.opened {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  animation: slideIn 0.5s ease-out 1;
+}
+.closed {
+  display: none;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    position: absolute;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

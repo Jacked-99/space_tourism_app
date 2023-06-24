@@ -1,0 +1,14 @@
+@use "../../Utils/mixins" as m;
+@use "../../Utils/variables" as v;
+
+.page-description {
+  line-height: 1.5rem;
+  margin-top: 0;
+  font-size: 1rem;
+  color: v.$purple;
+  font-family: v.$fontBarlow;
+}
+// @media (min-width: 768px) {
+//   .page-description {
+//   }
+// }

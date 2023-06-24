@@ -1,0 +1,106 @@
+@use "../../Utils/variables" as v;
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.5rem;
+  margin-top: 0;
+  padding-top: 1rem;
+}
+.navbar-logo:hover {
+  filter: drop-shadow(0 0 0.5rem v.$white);
+}
+.navbar-main {
+  backdrop-filter: blur(40px);
+  display: none;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  min-width: 60vw;
+  min-height: 8vh;
+  background: rgba($color: v.$white, $alpha: 0.04);
+  margin-top: 0;
+  margin-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-link,
+.link-number {
+  position: relative;
+  font-size: 1.1rem;
+  display: none;
+  text-transform: uppercase;
+  font-family: v.$fontBarlowCond;
+  color: v.$white;
+  letter-spacing: 0.2rem;
+}
+
+.main-link:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.3vh;
+  background-color: rgba($color: v.$white, $alpha: 0.5);
+  bottom: -100%;
+  left: 0;
+}
+.isActive::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.3vh;
+  background-color: rgba($color: v.$white, $alpha: 1);
+  bottom: -100%;
+  left: 0;
+}
+.link-number {
+  font-family: v.$fontBarlowCond;
+  font-weight: 700;
+  margin-inline: 1rem;
+  display: none;
+}
+.navbar-divider {
+  display: none;
+}
+.hamburger {
+  background: none;
+}
+.hamburger:hover {
+  border: none;
+}
+.closed {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .main-link {
+    display: inline;
+  }
+  .navbar-main {
+    display: flex;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar-container {
+    padding-top: 1rem;
+  }
+  .link-number {
+    display: inline-block;
+  }
+  .navbar-main::after {
+    position: fixed;
+    left: -47%;
+    content: "";
+    width: 30vw;
+    height: 0.1vh;
+    background-color: rgba($color: v.$white, $alpha: 0.5);
+  }
+  .navbar-main,
+  .navbar-logo {
+    margin-top: 2rem;
+  }
+}

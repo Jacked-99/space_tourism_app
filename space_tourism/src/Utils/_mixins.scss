@@ -1,0 +1,18 @@
+@mixin background($url) {
+  width: 100vw;
+  height: 100vh;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin show($time) {
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  animation: show $time ease 1;
+}
