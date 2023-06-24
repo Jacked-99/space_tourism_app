@@ -36,6 +36,9 @@
   display: grid;
   grid-template-columns: 1;
 }
+.crew-desc {
+  margin-inline: 5%;
+}
 @media (min-width: 768px) {
   .crew-content {
     width: 80vw;
@@ -66,5 +69,9 @@
   }
   .crew-navbar {
     max-width: 10vw;
+  }
+  .crew-desc {
+    height: 5rem;
+    width: 75vw;
   }
 }

@@ -1,11 +1,7 @@
 import "./DescriptionP.scss";
 
-const DescriptionP = ({ desc }) => {
-  return (
-    <span className="page-description">
-      <p>{desc}</p>
-    </span>
-  );
+const DescriptionP = ({ desc, classes }) => {
+  return <p className={`page-description ${classes}`}>{desc}</p>;
 };
 
 export default DescriptionP;

@@ -12,24 +12,36 @@
   justify-content: center;
 }
 .tech-img {
-  aspect-ratio: 1/2;
-  place-self: center;
+  width: 100%;
 }
 .tech-h3 {
   color: v.$white;
-  margin-block: 1rem;
+  margin-block: 0.5rem;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+.tech-desc {
+  margin-inline: 5%;
 }
 .tech-h5 {
   font-weight: normal;
   font-family: v.$fontBarlowCond;
   text-transform: uppercase;
   color: v.$purple;
+  margin-block: 0.5em;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .tech-h3,
   .tech-h5 {
     margin-block: 0.5rem;
+  }
+  .tech-h3 {
+    font-size: 2.5rem;
+  }
+  .tech-desc {
+    height: 9rem;
+    width: 65vw;
+    margin: auto;
   }
 }

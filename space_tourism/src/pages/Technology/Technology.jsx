@@ -50,7 +50,10 @@ const TechnologyPage = () => {
               <section>
                 <h5 className="tech-h5">Terminology...</h5>
                 <h3 className="tech-h3">{data.description.name}</h3>
-                <DescriptionP desc={data.description.info} />
+                <DescriptionP
+                  classes={"tech-desc"}
+                  desc={data.description.info}
+                />
               </section>
             </div>
           )}

@@ -50,7 +50,7 @@ const Crew = () => {
             <h5 className="crew-h5">{data.description.role} </h5>
             <h4 className="crew-h4">{data.description.name}</h4>
 
-            <DescriptionP desc={data.description.info} />
+            <DescriptionP classes={"crew-desc"} desc={data.description.info} />
           </section>
         </div>
       </CenteredContainer>

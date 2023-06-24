@@ -35,7 +35,7 @@ const Planet = () => {
       <PlanetsNavbar />
       <h2 className="planet-name">{params.planetName}</h2>
       <DescriptionP
-        className="planet-desc"
+        classes={"planet-desc"}
         desc={data.description}
       ></DescriptionP>
       <SectionDivider />
