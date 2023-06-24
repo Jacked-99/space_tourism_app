@@ -49,7 +49,7 @@ const TechnologyPage = () => {
               <TechNavBar />
               <section>
                 <h5 className="tech-h5">Terminology...</h5>
-                <h3 className="tech-h2">{data.description.name}</h3>
+                <h3 className="tech-h3">{data.description.name}</h3>
                 <DescriptionP desc={data.description.info} />
               </section>
             </div>

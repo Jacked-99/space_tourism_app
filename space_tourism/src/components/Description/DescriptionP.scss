@@ -7,3 +7,18 @@
   color: v.$purple;
   font-family: v.$fontBarlow;
 }
+@media (min-width: 768px) {
+  .page-description {
+    display: flex;
+    width: fit-content;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    place-self: center;
+    p {
+      line-break: strict;
+      width: 600px;
+    }
+  }
+}

@@ -26,3 +26,16 @@
     background-color: v.$white;
   }
 }
+@media (min-width: 768px) {
+  .crew-nav {
+    max-width: 10vw;
+    a {
+      display: inline-block;
+      margin-inline: 1rem;
+    }
+    a::after {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+  }
+}

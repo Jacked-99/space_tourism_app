@@ -15,7 +15,7 @@
   aspect-ratio: 1/2;
   place-self: center;
 }
-.tech-h2 {
+.tech-h3 {
   color: v.$white;
   margin-block: 1rem;
   text-transform: uppercase;
@@ -26,4 +26,10 @@
   font-family: v.$fontBarlowCond;
   text-transform: uppercase;
   color: v.$purple;
+}
+@media (min-width: 768px) {
+  .tech-h3,
+  .tech-h5 {
+    margin-block: 0.5rem;
+  }
 }

@@ -3,6 +3,7 @@
 
 .crewContainer {
   @include m.background($url: "../../assets/crew/background-crew-mobile.jpg");
+  max-height: fit-content;
   > h2 {
     margin: 0;
   }
@@ -46,19 +47,24 @@
     justify-content: space-between;
     align-items: center;
     grid-row: 2;
-    height: 50vh;
   }
   .crew-navbar {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
   .crew-img {
-    min-height: 40vh;
-    position: relative;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    position: fixed;
+    min-height: 32rem;
+    bottom: 0;
   }
   .crew-divider {
     display: none;
   }
   .crew-h4 {
-    font-size: 1.5em;
+    font-size: 2.5em;
+  }
+  .crew-navbar {
+    max-width: 10vw;
   }
 }

@@ -14,7 +14,7 @@ const Crew = () => {
   const parms = useParams();
   const data = useLoaderData();
   const navigate = useNavigate();
-  console.log();
+
   useEffect(() => {
     const scroll = setTimeout(() => {
       const nextLink = getNewCrewman(parms.crewName);

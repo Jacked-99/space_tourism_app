@@ -1,7 +1,11 @@
 import "./DescriptionP.scss";
 
 const DescriptionP = ({ desc }) => {
-  return <p className="page-description">{desc}</p>;
+  return (
+    <span className="page-description">
+      <p>{desc}</p>
+    </span>
+  );
 };
 
 export default DescriptionP;
