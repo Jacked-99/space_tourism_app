@@ -18,6 +18,7 @@ const MainNav = () => {
       <NavLink to={"/"}>
         <img src={Logo} alt="space-logo" className="navbar-logo"></img>
       </NavLink>
+
       <div className="navbar-main">
         <NavLink
           className={({ isActive, isPending }) =>
@@ -25,7 +26,7 @@ const MainNav = () => {
           }
           to={"/"}
         >
-          <span className="link-number"></span>
+          <span className="link-number">00</span>
           Home
         </NavLink>
         <NavLink
@@ -34,7 +35,7 @@ const MainNav = () => {
           }
           to={"/planets/moon"}
         >
-          <span className="link-number"></span>
+          <span className="link-number">01</span>
           Destination
         </NavLink>
         <NavLink
@@ -43,7 +44,7 @@ const MainNav = () => {
           }
           to={"/crew/commander"}
         >
-          <span className="link-number"></span>
+          <span className="link-number">02</span>
           Crew
         </NavLink>
         <NavLink
@@ -52,7 +53,7 @@ const MainNav = () => {
           }
           to={"/tech/launch_vechicle"}
         >
-          <span className="link-number"></span>
+          <span className="link-number">03</span>
           Technology
         </NavLink>
       </div>

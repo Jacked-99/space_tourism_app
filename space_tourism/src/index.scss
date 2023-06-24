@@ -112,3 +112,8 @@ button:focus-visible {
     font-weight: 400;
   }
 }
+@media (min-width: 1270px) {
+  #root {
+    margin: 0;
+  }
+}

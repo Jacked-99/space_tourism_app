@@ -55,9 +55,14 @@
   left: 0;
 }
 .link-number {
+  font-family: v.$fontBarlowCond;
+  font-weight: 700;
+  margin-inline: 1rem;
   display: none;
 }
-
+.navbar-divider {
+  display: none;
+}
 .hamburger {
   background: none;
 }
@@ -76,5 +81,26 @@
   }
   .navbar-main {
     display: flex;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar-container {
+    padding-top: 1rem;
+  }
+  .link-number {
+    display: inline-block;
+  }
+  .navbar-main::after {
+    position: fixed;
+    left: -30%;
+    content: "";
+    width: 20vw;
+    height: 0.1vh;
+    background-color: rgba($color: v.$white, $alpha: 0.5);
+  }
+  .navbar-main,
+  .navbar-logo {
+    margin-top: 2rem;
   }
 }
