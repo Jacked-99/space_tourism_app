@@ -18,7 +18,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 ## Overview
 
-### The challenge
+
 
 
 ### Screenshot
@@ -27,7 +27,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 ### Links
 
-- Live Site URL: [](https://space-tourism-app-z9gx.vercel.app/))
+- Live Site URL: [Live Site](https://space-tourism-app-z9gx.vercel.app/)
 
 ## My process
 
